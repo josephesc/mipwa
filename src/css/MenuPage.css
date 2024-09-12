@@ -1,0 +1,21 @@
+/* MenuPage.css */
+.menu-page {
+    padding: 20px;
+  }
+  
+  .menu-header {
+    background-color: #282c34;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .menu-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-content li {
+    margin: 10px 0;
+  }
+  

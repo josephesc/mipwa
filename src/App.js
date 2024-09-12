@@ -1,26 +1,25 @@
-//import logo from './logo.svg';
+// App.js
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import MenuPage from './views/MenuPage'; // Asegúrate de que la ruta sea correcta
+import Home from './views/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hola Mundo</h1>
-        <nav>
-          <ul>
-            <li><a href="#link1">Link 1</a></li>
-            <li><a href="#link2">Link 2</a></li>
-            <li><a href="#link3">Link 3</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <footer className="bottom-bar">
-        <div className="bar-item">Inicio</div>
-        <div className="bar-item">Buscar</div>
-        <div className="bar-item">Perfil</div>
-      </footer>
-    </div>
+    <Router>
+      <div className="App">
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/menu" element={<MenuPage />} />
+            {/* Agrega más rutas según sea necesario */}
+          </Routes>
+        <footer className="bottom-bar">
+          <div className="bar-item"><Link to="/home">Inicio</Link></div>
+          <div className="bar-item">Buscar</div>
+          <div className="bar-item">Perfil</div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
